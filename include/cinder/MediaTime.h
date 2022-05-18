@@ -28,7 +28,7 @@
 namespace cinder {
 
 //! Does not allow negative or zero base
-struct MediaTime {
+struct CI_API MediaTime {
   public:
 	static constexpr int32_t DEFAULT_TIME_BASE = 1000000; // microseconds
 	static constexpr int64_t MAX_TIME_BASE = 2147483647;
@@ -171,7 +171,7 @@ struct MediaTime {
 		return MediaTime( -value, base, epoch );
 	}
 
-	friend std::ostream& operator<<( std::ostream &os, const MediaTime &mt );
+	friend CI_API std::ostream& operator<<( std::ostream &os, const MediaTime &mt );
 
 	//! Divides the value and base by the greatest common common divisor of both. Does not affect epoch
 	void simplify();
