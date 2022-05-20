@@ -97,6 +97,7 @@ list( APPEND CINDER_SRC_FILES
 # Relevant libs and include dirs depending on target platform and target GL.
 if( CINDER_GL_CORE )
 	if( NOT CINDER_HEADLESS_GL_OSMESA )
+		cmake_policy(SET CMP0072 NEW)
 		find_package( OpenGL REQUIRED )
 		list( APPEND CINDER_LIBS_DEPENDS ${OPENGL_LIBRARIES} )
 		list( APPEND CINDER_INCLUDE_SYSTEM_PRIVATE ${OPENGL_INCLUDE_DIR} )
