@@ -67,6 +67,9 @@ jniLibs/
 # cmake generated files
 cinderConfig.cmake
 
+# Clang
+.cache/
+
 # CinderBlocks
 blocks/
 !blocks/[__AppTemplates,Box2D,Cairo,FMOD,LocationManager,MotionManager,OSC,QuickTime,TUIO]
