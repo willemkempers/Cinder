@@ -5,7 +5,7 @@ function build() {
     mkdir -p build
     (
         cd build
-        cmake -S .. -B . -GNinja -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_BUILD_TYPE=$build_type
+        cmake -S .. -B . -GNinja -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_BUILD_TYPE=$build_type -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang
         cmake --build .
     )
 }
