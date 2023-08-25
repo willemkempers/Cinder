@@ -5,7 +5,7 @@ function build() {
     mkdir -p build
     (
         cd build
-        cmake -S .. -B . -GNinja -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_BUILD_TYPE=$build_type -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET="11.0"
+        cmake -S .. -B . -GNinja -DCMAKE_EXPORT_COMPILE_COMMANDS=1 -DCMAKE_BUILD_TYPE=$build_type -DCMAKE_OSX_ARCHITECTURES="arm64;x86_64" -DCMAKE_OSX_DEPLOYMENT_TARGET="11.0" -DCMAKE_CXX_COMPILER=clang++ -DCMAKE_C_COMPILER=clang
         cmake --build .
     )
 }
